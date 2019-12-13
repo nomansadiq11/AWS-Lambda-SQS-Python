@@ -5,3 +5,11 @@ provider:
 functions:
   ReadBCMViewAndPutSQS:
     handler: fetchsql.main
+
+
+resources:
+  Resources:
+    BCMQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "BCMQueue"
